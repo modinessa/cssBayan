@@ -1,0 +1,62 @@
+html {
+  width: 60em;
+  margin: 0 auto;
+  background-color: rgb(254, 255, 187);
+}
+
+h1 {
+  font-family: "Red Hat Text";
+  font-weight: bold;
+  font-size: 2em;
+  color: rgb(17, 138, 134);
+  padding: 1em 0 0.5em 1em;
+}
+
+input {
+  position: absolute;
+  z-index: -1;
+}
+
+.accordion-container {
+  margin: 1em;
+  border-radius: 0.5em;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.accordion-item-title {
+  font-family: "Aleo";
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  background: lightseagreen;
+  color: #fff;
+}
+
+.container:hover .accordion-item-title {
+  color: rgb(132, 247, 243);
+}
+
+.accordion-item-title::after {
+  /* display: none; */
+  content: url(../images/plus-solid.svg);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  transition: all 0.6s;
+}
+
+.accordion-item-content {
+  display: flex;
+  justify-content: center;
+  /* max-height: 0; */
+  background: white;
+  transition: all 0.6s;
+}
+
+.accordion-item-content img {
+  width: 30em;
+}
