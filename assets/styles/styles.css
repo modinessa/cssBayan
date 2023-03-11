@@ -24,6 +24,10 @@ input {
   cursor: pointer;
 }
 
+.accordion-container:active {
+  opacity: 85%;
+}
+
 .accordion-item-title {
   font-family: "Aleo";
   font-size: 1.2em;
@@ -41,7 +45,7 @@ input {
 }
 
 .accordion-item-title::after {
-  /* display: none; */
+  display: none;
   content: url(../images/plus-solid.svg);
   width: 20px;
   height: 20px;
@@ -50,13 +54,32 @@ input {
 }
 
 .accordion-item-content {
+  margin-top: 1em;
+  background-color: rgb(254, 255, 187);
   display: flex;
   justify-content: center;
-  /* max-height: 0; */
-  background: white;
+  max-height: 0;
   transition: all 0.6s;
 }
 
 .accordion-item-content img {
   width: 30em;
+}
+
+.container:hover .accordion-item-title::after {
+  display: block;
+}
+
+input:checked + .accordion-item-title {
+  color: rgb(132, 247, 243);
+}
+
+input:checked + .accordion-item-title::after {
+  transform: rotate(45deg);
+}
+
+.accordion-container:hover .accordion-item-content,
+.accordion-item-content:hover,
+input:checked ~ .accordion-item-content {
+  max-height: 100vh;
 }
