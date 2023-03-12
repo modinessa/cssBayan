@@ -1,5 +1,5 @@
 html {
-  width: 60em;
+  width: 95vw;
   margin: 0 auto;
   background-color: rgb(254, 255, 187);
 }
@@ -7,7 +7,7 @@ html {
 h1 {
   font-family: "Red Hat Text";
   font-weight: bold;
-  font-size: 2em;
+  font-size: 3em;
   color: rgb(17, 138, 134);
   padding: 1em 0 0.5em 1em;
 }
@@ -18,7 +18,7 @@ input {
 }
 
 .accordion-container {
-  margin: 1em;
+  margin: 1em 0;
   border-radius: 0.5em;
   overflow: hidden;
   cursor: pointer;
@@ -30,7 +30,7 @@ input {
 
 .accordion-item-title {
   font-family: "Aleo";
-  font-size: 1.2em;
+  font-size: 1.8em;
   display: flex;
   justify-content: space-between;
   padding: 1em;
@@ -47,8 +47,8 @@ input {
 .accordion-item-title::after {
   display: none;
   content: url(../images/plus-solid.svg);
-  width: 20px;
-  height: 20px;
+  width: 1em;
+  height: 1em;
   text-align: center;
   transition: all 0.6s;
 }
@@ -64,7 +64,7 @@ input {
 }
 
 .accordion-item-content img {
-  width: 30em;
+  width: 40em;
 }
 
 .container:hover .accordion-item-title::after {
@@ -84,4 +84,32 @@ input:checked + .accordion-item-title::after {
 input:checked ~ .accordion-item-content {
   max-height: 100vh;
   opacity: 1;
+}
+
+@media only screen and (min-width: 820px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  .accordion-item-title {
+    font-size: 1.5em;
+  }
+  .accordion-item-content img {
+    width: 35em;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  html {
+    width: 60em;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+  .accordion-item-title {
+    font-size: 1.2em;
+  }
+  .accordion-item-content img {
+    width: 30em;
+  }
 }
